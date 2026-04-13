@@ -14,8 +14,6 @@ It is designed to simulate real-world distributed systems using queues and backg
 * **Redis** – Message broker
 * **Celery** – Asynchronous task queue
 
----
-
 ## Features
 
 ### Task Management APIs
@@ -38,8 +36,6 @@ It is designed to simulate real-world distributed systems using queues and backg
 
 * Tasks are processed by Celery workers in the background
 * Multiple workers allow parallel execution
-
----
 
 ### Retry Mechanism
 
@@ -116,13 +112,13 @@ Create a `.env` file:
 MONGO_URI=your_mongodb_connection_string
 ```
 
-## 📊 Task Lifecycle
+## Task Lifecycle
 
 ```text
 PENDING → PROCESSING → COMPLETED / FAILED
 ```
 
-## 💡 Trade-offs
+## Trade-offs
 
 * No preemption of running tasks
 * Priority enforced via queues instead of dynamic scheduling
